@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tensor-boxer</title>
+    <style type="text/css">
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 1.5em;
+            margin-left: 5em;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h2>Images</h2>
+    {% for image in images %}
+        <a href="/stage/{{ image }}">{{ image.rsplit('.', 1)[0] }}</a>
+        <br>
+    {% endfor %}
+</body>
+</html>

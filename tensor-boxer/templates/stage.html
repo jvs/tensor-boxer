@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tensor-boxer</title>
+    <style>
+        canvas {
+            position: absolute;
+        }
+    </style>
+    <script type="text/javascript">
+        var currentName = '{{ name }}';
+    </script>
+</head>
+<body>
+
+    <canvas id="Canvas" width="600" height="400"></canvas>
+    <script src="/static/tensor-boxer.js"></script>
+
+    <form id="Form" method="POST" action="/submit">
+        <input type="hidden" name="Name" value="{{ name }}">
+        <input type="hidden" id="Boxes" name="Boxes" value="[]">
+    </form>
+
+</body>
+</html>
