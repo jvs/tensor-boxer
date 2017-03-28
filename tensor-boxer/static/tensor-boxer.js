@@ -261,6 +261,10 @@ RectTool.prototype.onMouseMove = function(pt) {
 
 RectTool.prototype.onMouseUp = function(pt) {
     this.onMouseMove(pt);
+    var tmp = unproject(this.box);
+    if (Math.abs(tmp.x2 - tmp.x1) < 4 || Math.abs(tmp.y2 - tmp.y1) < 4) {
+        boxes.pop();
+    }
     this.box = null;
 };
 
